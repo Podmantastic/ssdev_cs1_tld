@@ -16,12 +16,11 @@ This repository outlines the solution architecture for a data and advanced analy
 ### Key Components
 
 1. **Data Ingestion and Transformation**
-   - **Azure Data Factory (ADF)**: Orchestrates data ingestion and transformation pipelines.
-   - **Azure Blob Storage**: Temporarily stores uploaded data before processing.
+   - **Azure Blob Storage**: Temporarily stores uploaded data before processing. Integrates well with Azure Functios.
    - **Azure Functions**: Handles lightweight, event-driven data processing tasks.
 
 2. **Data Storage**
-   - **Azure SQL Database**: Stores structured data and supports querying.
+   - **Azure SQL Database**: Stores structured data and supports querying. Multipke schema or sepate DBs TBD.
    - **Azure Cosmos DB**: Stores unstructured or semi-structured data (if needed).
 
 3. **Data Querying and Visualization**
@@ -36,7 +35,7 @@ This repository outlines the solution architecture for a data and advanced analy
    - **Azure Active Directory B2C**: Handles user authentication and authorization.
 
 6. **Containerization**
-   - **Azure Kubernetes Service (AKS)**: Manages containerized application deployment.
+   - **Azure Kubernetes Service (AKS)**: Manages containerized application deployment. Overly complex for a such a small team.
    - **Docker Containers**: Packages application components (e.g., web app, API, data processing logic).
 
 7. **Monitoring and Logging**
@@ -91,6 +90,11 @@ This repository outlines the solution architecture for a data and advanced analy
 ---
 
 ## Implementation Plan
+
+A PoC is recommended, to be implemented as a single-person 1 week spike with no cloud usage.
+Get client feedback ASAP.
+
+Once the concept is agreed upon:
 
 1. **Phase 1: Data Ingestion and Storage**
    - Set up Azure Blob Storage and Azure Data Factory.
